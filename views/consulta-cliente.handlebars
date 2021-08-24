@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jubileu Respresentação Comercial</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+	<header>
+	<div class="caixa">
+		<img src="./logo.png">
+		<h1 class="titulo-principal">Repex - Representante Expresso</h1>
+			<nav class="menu-principal">
+				<ul>
+					<li><a href="/index">Home</a></li>
+					
+					<li><a href="/incluir-cliente">Incluir Cliente</a></li>
+				</ul>
+			</nav>
+	</div>
+	</header>
+			<div>
+			{{#with ObjetoMostrarCliente}}
+				<tbody>
+					<div >
+						<section>
+							Razão Social : {{razao_social}} | <br>
+							Inscrição Estadual : {{ie}} | <br>
+							CNPJ : {{cnpj}}<br>
+							Nome Fantasia : {{nome_fantasia}}<br>
+							CEP : {{cep}}<br>
+							Rua : {{logradouro}}<br>
+							Número : {{numero}}<br>
+							Complemento : {{complemento}}<br>
+							Cidade : {{cidade}}<br>
+							Estado : {{uf}}<br>
+							Email : {{email_contato}}<br>
+							Telefone 1 : {{telefone1}}<br>
+							Telefone 2 : {{telefone2}}<br>
+							Email contato : {{email_contato}}<br>
+							Email XML : {{email_xml}}<br>
+							Vendedor : {{vendedor}}<br>
+							
+							<a  href="/del-cliente/{{id}}"><button class="botao_apagar">Apagar</button></a>
+							<a href="/altera-cliente/{{id}}"><button class="botao_consultar">Alterar</button></a>						
+							
+							<hr></hr>        
+						</section>         
+					</div>
+				</tbody>
+			{{/with}}
+			</div>
+
+	
+
+	<footer>
+		<img src="./logo.png">	
+		<p class="copyright"> &copy; Copyright Jubileu Alimentos </p>
+	</footer>
+		
+	<script src="/validacao.js"></script>
+	</body>
+</html>

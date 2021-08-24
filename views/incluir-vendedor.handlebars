@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jubileu Respresentação Comercial</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+	<header>
+		<div class="caixa">
+		<img src="./logo.png">
+		<h1 class="titulo-principal">Repex - Representante Expresso</h1>
+			<nav class="menu-principal">
+				<ul>
+					<li><a href="index">Home</a></li>
+					<li><a href="incluir-vendedor">Incluir vendedor</a></li>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+	<h2>Clientes</h2>
+	<section class="incluir-cliente">
+		<h2 class="subtitulo">Incluir vendedor</h2>
+		<form action = "/listar-vendedores" method="POST" id="form-incluir-vendedor">
+			
+			<div class="novo-cadastro">
+				<label for="nome">Nome do Vendedor</label>
+				<input type="text" id="nome"  name="nome" placeholder="Nome do vendedor" class="campo">
+			</div>
+            <div class="novo-cadastro">
+				<label for="email">E-mail de contato</label>
+				<input type="email" id="email" name="email" placeholder="seuemail@dominio.com.br" class="campo" required>
+			</div>
+			
+			<div class="novo-cadastro">
+				<label for="telefone">Telefone</label>
+				<input type="tel" id="telefone" onkeyup="mascaraTelefone('(##) #### ####',this)" name="telefone" pattern="\(\d{2}\).\d{4,5}.\d{4,}" placeholder="(##) ####-####" class="campo" required>
+			</div>
+			<div class="novo-cadastro"></div>			
+				<label for="comissao">Vendedor</label>
+				<input type="number" id="comissao" name="comissao" placeholder="Comissão do vendedor" class="campo" required>
+			</div>
+			<button type="submit" id="adicionar" class="botão-adicionar">Incluir</button>
+
+
+
+		</form>
+	</section>		
+
+	</main>
+
+	<footer>
+		<img src="./logo.png">	
+		<p class="copyright">&copy; Copyright Jubileu Alimentos</p>
+	</footer>
+    
+	
+	<script src="/validacao.js"></script>
+	
+	
+	
+</body>
+</html>
